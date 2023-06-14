@@ -23,7 +23,7 @@ public class Tableau {
         this.tab[this.aspi.getCooX()][this.aspi.getCooY()] = this.aspi;
     }
 
-    public void Avancer(){
+    public void avancer(){
         int x = this.aspi.getCooX();
         int y = this.aspi.getCooY();
         switch (this.aspi.getOrientation()) {
@@ -39,8 +39,12 @@ public class Tableau {
 
     }
 
-    public Aspirateur getAspi() {
-        return this.aspi;
+    public void droite(){
+        this.aspi.droite();
+    }
+
+    public void gauche(){
+        this.aspi.gauche();
     }
 
     @Override
