@@ -1,4 +1,4 @@
-import org.github.helyion.Aspirateur;
+import org.github.helyion.AspirateurClassique;
 import org.github.helyion.Orientation;
 import org.github.helyion.Tableau;
 
@@ -8,7 +8,7 @@ public class Test {
 
     @org.junit.jupiter.api.Test
     void cas1() {
-        Tableau tab = new Tableau(10, 10, new Aspirateur(5,5, Orientation.N));
+        Tableau tab = new Tableau(10, 10, new AspirateurClassique(5,5, Orientation.N));
         try{
             tab.getAspi().droite();
             tab.Avancer();

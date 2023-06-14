@@ -1,10 +1,9 @@
 package org.github.helyion;
 
-public class Aspirateur {
+public abstract class Aspirateur {
     private int cooX;
     private int cooY;
     private Orientation orientation;
-    private Tableau tableau;
     public Aspirateur(int cooX, int cooY, Orientation orientation){
         this.cooX = cooX;
         this.cooY = cooY;
@@ -35,23 +34,9 @@ public class Aspirateur {
         this.orientation = orientation;
     }
 
-    public void gauche(){
-        switch (this.getOrientation()) {
-            case N -> this.setOrientation(Orientation.W);
-            case W -> this.setOrientation(Orientation.S);
-            case S -> this.setOrientation(Orientation.E);
-            case E -> this.setOrientation(Orientation.N);
-        }
-    }
+    public abstract void gauche();
 
-    public void droite(){
-        switch (this.getOrientation()) {
-            case N -> this.setOrientation(Orientation.E);
-            case W -> this.setOrientation(Orientation.N);
-            case S -> this.setOrientation(Orientation.W);
-            case E -> this.setOrientation(Orientation.S);
-        }
-    }
+    public abstract void droite();
 
     @Override
     public String toString() {

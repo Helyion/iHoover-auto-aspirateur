@@ -2,7 +2,7 @@ package org.github.helyion;
 
 public class Main {
     public static void main(String[] args) {
-        Tableau tab = new Tableau(10, 10, new Aspirateur(5,5,Orientation.N));
+        Tableau tab = new Tableau(10, 10, new AspirateurClassique(5,5,Orientation.N));
         try{
             tab.getAspi().droite();
             tab.Avancer();
